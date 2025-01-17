@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class RenderPieces : MonoBehaviour
 {
-    //public List<GameObject> pieces = new List<GameObject>();
     public Dictionary<int, GameObject> pieces = new Dictionary<int, GameObject>();
 
     public GameObject King;
@@ -105,56 +104,6 @@ public class RenderPieces : MonoBehaviour
 
             pieces.Add(black_pawn_identity, black_pawn);
         }
-
-        //GameObject white_Pawn = Instantiate(Pawn, renderPos, Quaternion.identity);
-        //GameObject black_Pawn = Instantiate(pawn, renderPos, Quaternion.identity);
-
-        //pieces.Add(white | Pawn_ | 1, white_Pawn);
-        //pieces.Add(white | Pawn_ | 2, white_Pawn);
-        //pieces.Add(white | Pawn_ | 3, white_Pawn);
-        //pieces.Add(white | Pawn_ | 4, white_Pawn);
-        //pieces.Add(white | Pawn_ | 5, white_Pawn);
-        //pieces.Add(white | Pawn_ | 6, white_Pawn);
-        //pieces.Add(white | Pawn_ | 7, white_Pawn);
-        //pieces.Add(white | Pawn_ | 8, white_Pawn);
-
-        //pieces.Add(black | Pawn_ | 1, black_Pawn);
-        //pieces.Add(black | Pawn_ | 2, black_Pawn);
-        //pieces.Add(black | Pawn_ | 3, black_Pawn);
-        //pieces.Add(black | Pawn_ | 4, black_Pawn);
-        //pieces.Add(black | Pawn_ | 5, black_Pawn);
-        //pieces.Add(black | Pawn_ | 6, black_Pawn);
-        //pieces.Add(black | Pawn_ | 7, black_Pawn);
-        //pieces.Add(black | Pawn_ | 8, black_Pawn);
-
-
-        //pieces.Add(white_King);
-        //pieces.Add(white_Queen);
-
-        //for (int i = 0; i < 2; i++)
-        //{
-        //    pieces.Add(white_Bishop);
-        //    pieces.Add(white_Knight);
-        //    pieces.Add(white_Rook);
-        //}
-        //for (int i = 0; i < 8; i++)
-        //{
-        //    pieces.Add(white_Pawn);
-        //}
-
-        //pieces.Add(black_King);
-        //pieces.Add(black_Queen);
-
-        //for (int i = 0; i < 2; i++)
-        //{
-        //    pieces.Add(black_Bishop);
-        //    pieces.Add(black_Knight);
-        //    pieces.Add(black_Rook);
-        //}
-        //for (int i = 0; i < 8; i++)
-        //{
-        //    pieces.Add(black_Pawn);
-        //}
 
     }
 }
