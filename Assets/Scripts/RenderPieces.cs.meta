@@ -3,7 +3,20 @@ guid: 3ca0bf9874e404cbd948d1abb0c92be7
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - King: {fileID: 5767695539171894055, guid: 6a14e255d62a04e7089579a6e9f43340, type: 3}
+  - king: {fileID: 7781827509674810483, guid: 06d7d7b9db7e34a8fa5f9913889bc4df, type: 3}
+  - Queen: {fileID: 849299638474659997, guid: 1ec85d4f083164236b2ed48a2cf3cbda, type: 3}
+  - queen: {fileID: 1996686924618978022, guid: 064523c75576449b79639a82b85555fd, type: 3}
+  - Rook: {fileID: 4050115681729375080, guid: 421722bbb97534dc4a5b911ca70b0d12, type: 3}
+  - rook: {fileID: 1368696264770719850, guid: 17e7096021c9a4bd8a034bfcb3fd4a67, type: 3}
+  - Bishop: {fileID: 1810890330843390126, guid: d8ca2658aa52e4d318d38d4c5397fa49, type: 3}
+  - bishop: {fileID: 6851369640092743128, guid: 1445c359198c4440f964e2175bfe35b4, type: 3}
+  - Knight: {fileID: 1008995107817847894, guid: 281cf77a354b34eed958d70786a2ffa0, type: 3}
+  - knight: {fileID: 7350906262947428677, guid: 22af7cbd9fbc144d69c65539a0a52bbf, type: 3}
+  - Pawn: {fileID: 8847694222840643524, guid: 071e33b75a4104dd69896b23712572b7, type: 3}
+  - pawn: {fileID: 5636619843571051049, guid: 29cd8c49b326e4c72b7a782bde161ea5, type: 3}
+  - CB: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

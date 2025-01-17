@@ -12,6 +12,7 @@ public class master : MonoBehaviour
         Debug.Log("Reached Master Script!");
         chessBoard.DrawChessBoard();
         renderPieces.DrawPieces();
+        renderPieces.loadStartingPos();
     }
 
     void Update()
