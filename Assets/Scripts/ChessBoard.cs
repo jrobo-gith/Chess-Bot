@@ -26,6 +26,14 @@ public class ChessBoard : MonoBehaviour
                 var position = new Vector2(-squareSize + file, squareSize - rank);
 
                 GameObject square = Instantiate(Square, position, Quaternion.identity);
+                square.AddComponent<squareHandler>();
+                square.AddComponent<BoxCollider>();
+                square.AddComponent<Rigidbody>();
+
+                Rigidbody squareRB = square.GetComponent<Rigidbody>();
+                squareRB.isKinematic = true;
+                BoxCollider squareBC = square.GetComponent<BoxCollider>();
+                squareBC.isTrigger = true;
                 Renderer squareRenderer = square.GetComponent<Renderer>();
 
                 squareRenderer.material.color = squareColor;

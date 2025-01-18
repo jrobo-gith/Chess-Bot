@@ -9,7 +9,7 @@ public class master : MonoBehaviour
     public PieceTracker pT;
 
     string StartingFEN = "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR";
-    string FIEN = "4k2r/6r1/8/8/8/8/3R4/R3K3";
+    //string FIEN = "8/8/8/4p1K1/2k1P3/8/8/8";
 
     void Start()
     {
@@ -17,10 +17,5 @@ public class master : MonoBehaviour
         chessBoard.DrawChessBoard();
         renderPieces.DrawPieces();
         pT.updatePieces(StartingFEN);
-    }
-
-    void Update()
-    {
-        
     }
 }

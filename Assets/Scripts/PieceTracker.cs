@@ -17,7 +17,7 @@ public class PieceTracker : MonoBehaviour
 
         for (int i = 0; i < 64; i++)
         {
-            Debug.Log(posList[i]);
+            //Debug.Log(posList[i]);
             float squarePosX = CB.chessSquares[i].transform.position.x;
             float squarePosY = CB.chessSquares[i].transform.position.y;
 

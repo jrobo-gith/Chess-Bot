@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class RenderPieces : MonoBehaviour
 {
+
     public Dictionary<int, GameObject> pieces = new Dictionary<int, GameObject>();
 
     public GameObject King;
@@ -19,7 +20,7 @@ public class RenderPieces : MonoBehaviour
     public GameObject bishop;
 
     public GameObject Knight;
-    public GameObject knight;
+    public GameObject knight; 
 
     public GameObject Pawn;
     public GameObject pawn;
@@ -49,11 +50,17 @@ public class RenderPieces : MonoBehaviour
         GameObject white_King = Instantiate(King, renderPos, Quaternion.identity);
         GameObject black_King = Instantiate(king, renderPos, Quaternion.identity);
 
+        white_King.AddComponent<dragDrop>();
+        black_King.AddComponent<dragDrop>();
+
         pieces.Add(white | King_ | 0, white_King);
         pieces.Add(black | King_ | 0, black_King);
 
         GameObject white_Queen = Instantiate(Queen, renderPos, Quaternion.identity);
         GameObject black_Queen = Instantiate(queen, renderPos, Quaternion.identity);
+
+        white_Queen.AddComponent<dragDrop>();
+        black_Queen.AddComponent<dragDrop>();
 
         pieces.Add(white | Queen_ | 0, white_Queen);
         pieces.Add(black | Queen_ | 0, black_Queen);
@@ -64,28 +71,42 @@ public class RenderPieces : MonoBehaviour
         for (int i = 1; i < 3; i++)
         {
             GameObject white_Rook = Instantiate(Rook, renderPos, Quaternion.identity);
+
+            white_Rook.AddComponent<dragDrop>();
+
             int white_rook_ID = white | Rook_ | i;
             pieces.Add(white_rook_ID, white_Rook);
 
             GameObject black_Rook = Instantiate(rook, renderPos, Quaternion.identity);
+            black_Rook.AddComponent<dragDrop>();
+
             int black_rook_ID = black | Rook_ | i;
             pieces.Add(black_rook_ID, black_Rook);
 
 
+
             GameObject white_Bishop = Instantiate(Bishop, renderPos, Quaternion.identity);
+            white_Bishop.AddComponent<dragDrop>();
+
             int white_bishop_ID = white | Bishop_ | i;
             pieces.Add(white_bishop_ID, white_Bishop);
 
             GameObject black_Bishop = Instantiate(bishop, renderPos, Quaternion.identity);
+            black_Bishop.AddComponent<dragDrop>();
+
             int black_bishop_ID = black | Bishop_ | i;
             pieces.Add(black_bishop_ID, black_Bishop);
 
 
             GameObject white_Knight = Instantiate(Knight, renderPos, Quaternion.identity);
+            white_Knight.AddComponent<dragDrop>();
+
             int white_knight_ID = white | Knight_ | i;
             pieces.Add(white_knight_ID, white_Knight);
 
             GameObject black_Knight = Instantiate(knight, renderPos, Quaternion.identity);
+            black_Knight.AddComponent<dragDrop>();
+
             int black_knight_ID = black | Knight_ | i;
             pieces.Add(black_knight_ID, black_Knight);
         }
@@ -95,14 +116,33 @@ public class RenderPieces : MonoBehaviour
         for (int i = 1; i < 9; i++)
         {
             GameObject white_pawn = Instantiate(Pawn, renderPos, Quaternion.identity);
-            int white_pawn_identity = white | Pawn_ | i;
+            white_pawn.AddComponent<dragDrop>();
 
+            int white_pawn_identity = white | Pawn_ | i;
             pieces.Add(white_pawn_identity, white_pawn);
 
             GameObject black_pawn = Instantiate(pawn, renderPos, Quaternion.identity);
-            int black_pawn_identity = black | Pawn_ | i;
+            black_pawn.AddComponent<dragDrop>();
 
+            int black_pawn_identity = black | Pawn_ | i;
             pieces.Add(black_pawn_identity, black_pawn);
+        }
+
+        foreach (KeyValuePair<int, GameObject> entry in pieces)
+        {
+            GameObject obj = entry.Value;
+
+            if (obj != null)
+            {
+                obj.AddComponent<Rigidbody>();
+                Rigidbody objRB = obj.GetComponent<Rigidbody>();
+                objRB.isKinematic = true;
+
+                obj.AddComponent<BoxCollider>();
+                BoxCollider objBC = obj.GetComponent<BoxCollider>();
+                objBC.size = new Vector3(objBC.size.x, objBC.size.y, 4);
+                objBC.center = new Vector3(0, 0, 1.6f);
+            }
         }
 
     }
