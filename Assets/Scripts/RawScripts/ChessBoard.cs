@@ -15,6 +15,7 @@ public class ChessBoard : MonoBehaviour
     public void DrawChessBoard()
     {
         chessSquares.Clear();
+        int square_num = 0;
 
         for (int rank=0; rank < 8; rank++)
         {
@@ -29,6 +30,8 @@ public class ChessBoard : MonoBehaviour
                 square.AddComponent<squareHandler>();
                 square.AddComponent<BoxCollider>();
                 square.AddComponent<Rigidbody>();
+                string name = square_num.ToString();
+                square.name = name;
 
                 Rigidbody squareRB = square.GetComponent<Rigidbody>();
                 squareRB.isKinematic = true;
@@ -39,6 +42,7 @@ public class ChessBoard : MonoBehaviour
                 squareRenderer.material.color = squareColor;
                 chessSquares.Add(square);
 
+                square_num++;
             }
         }
 

@@ -332,6 +332,8 @@ MonoBehaviour:
   chessBoard: {fileID: 136830922274845118, guid: e32e1bb3c85674348bfc7446e7ac9018, type: 3}
   renderPieces: {fileID: 2755116871986806150, guid: 47f9b337e210c4d079248874c70639c7, type: 3}
   pT: {fileID: 1355709989382533265, guid: 773331c76b3064b2db3bbeb46ee8e2e3, type: 3}
+  boardUpdate: {fileID: 2514542920609020356, guid: 993416e44356b4f7e98327abe600feb5, type: 3}
+  PrintPieceLocations: 0
 --- !u!4 &1081542266
 Transform:
   m_ObjectHideFlags: 0
