@@ -15,4 +15,4 @@ Creating a chess game and bot to win. This project was made in Unity to take adv
 - Created a FEN string translator that reads the current position and positions / despawns the pieces accordingly.
     - Still need to impliment the other rules seen in the FEN string such as white/black to move, castling ability, and en-passant stuff.
 - Implimented piece drag and drop movement, with each piece able to snap to the nearest square when dropped by the mouse.
-    - Need to impliment updating of the posList List containing the pieces positions.
+    - Now have implimented updating of the posList List containing the pieces positions.
