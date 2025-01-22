@@ -30,7 +30,7 @@ public class PieceTracker : MonoBehaviour
     }
 
 
-    public void updatePieces(string fenString)
+    public void startPieces(string fenString)
     {
         posList = FT.translateFENtoBoard(fenString);
         for (int i = 0; i < 64; i++)

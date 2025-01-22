@@ -19,7 +19,7 @@ public class master : MonoBehaviour
         Debug.Log("Reached Master Script!");
         chessBoard.DrawChessBoard();
         renderPieces.DrawPieces();
-        pT.updatePieces(StartingFEN);
+        pT.startPieces(StartingFEN);
         pT.checkForDeletedPieces();
     }
 
