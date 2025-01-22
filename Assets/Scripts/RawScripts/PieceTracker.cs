@@ -10,12 +10,29 @@ public class PieceTracker : MonoBehaviour
 
     public int[] posList;
 
+    public void checkForDeletedPieces()
+    {
+        foreach (var kvp in RP.pieces)
+        {
+            bool existsOnBoard = false;
+            for (int i=0; i<64; i++)
+            {
+                if (kvp.Key == posList[i])
+                {
+                    existsOnBoard = true;
+                }
+            }
+            if (existsOnBoard == false)
+            {
+                Destroy(kvp.Value);
+            }
+        }
+    }
+
 
     public void updatePieces(string fenString)
     {
         posList = FT.translateFENtoBoard(fenString);
-        HashSet<int> piecesToKeep = new HashSet<int>();
-
         for (int i = 0; i < 64; i++)
         {
             //Debug.Log(posList[i]);
@@ -26,17 +43,17 @@ public class PieceTracker : MonoBehaviour
             if (pieceKey != 0 && RP.pieces.TryGetValue(pieceKey, out GameObject piece)) // Check if square is not empty and has a corresponding GameObject
             {
                 piece.transform.position = new Vector3(squarePosX, squarePosY, -1);
-                piecesToKeep.Add(pieceKey); 
-
             }
 
-            foreach (var kvp in RP.pieces)
-            {
-                if (!piecesToKeep.Contains(kvp.Key))
-                {
-                    Destroy(kvp.Value);
-                }
-            }
+            
+
+            //foreach (var kvp in RP.pieces)
+            //{
+            //    if (!piecesToKeep.Contains(kvp.Key))
+            //    {
+            //        Destroy(kvp.Value);
+            //    }
+            //}
         }
 
         //foreach (var kvp in RP.pieces)
@@ -59,7 +76,7 @@ public class PieceTracker : MonoBehaviour
         //        }
         //        else
         //        {
-        //            //Destroy(kvp.Value);
+        //            Destroy(kvp.Value);
         //        }
         //    }
         //}
