@@ -11,8 +11,8 @@ public class master : MonoBehaviour
 
     public bool PrintPieceLocations = false;
 
-    string StartingFEN = "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR";
-    //string StartingFEN = "8/8/8/4p1K1/2k1P3/8/8/8";
+    //string StartingFEN = "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR";
+    string StartingFEN = "8/8/8/4p1K1/2k1P3/8/8/8";
 
     void Start()
     {

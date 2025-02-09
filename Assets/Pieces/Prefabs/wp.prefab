@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6933524307138270289}
   - component: {fileID: 640198574870962417}
   - component: {fileID: 8170625216946490354}
+  - component: {fileID: 7269384631220335846}
   m_Layer: 0
   m_Name: wp
   m_TagString: Untagged
@@ -99,3 +100,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   renderPieces: {fileID: 2755116871986806150, guid: 47f9b337e210c4d079248874c70639c7, type: 3}
   pieceTracker: {fileID: 1355709989382533265, guid: 773331c76b3064b2db3bbeb46ee8e2e3, type: 3}
+--- !u!114 &7269384631220335846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8847694222840643524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6bb39ca0c6b84ee9bd4ffdefbcef5df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  twoSquares: 0
+  pT: {fileID: 1355709989382533265, guid: 773331c76b3064b2db3bbeb46ee8e2e3, type: 3}
+  rP: {fileID: 2755116871986806150, guid: 47f9b337e210c4d079248874c70639c7, type: 3}

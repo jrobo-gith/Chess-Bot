@@ -25,6 +25,8 @@ public class dragDrop : MonoBehaviour
         Vector3 mouseWorldPosition = GetMouseWorldPosition();
         transform.position = mouseWorldPosition;
         offset = transform.position - mouseWorldPosition;
+        float z = (float)(transform.position.z - 0.1);
+        transform.position = new Vector3(transform.position.x, transform.position.y, z);
 
         if (castRay(transform.position, new Vector3(0, 0, 1), out RaycastHit hit))
         {
